@@ -1,0 +1,213 @@
+\section{Coordinate3D Class Reference}
+\label{classCoordinate3D}\index{Coordinate3D@{Coordinate3D}}
+{\tt \#include $<$coordinate3d.h$>$}
+
+\subsection*{Public Methods}
+\begin{CompactItemize}
+\item 
+{\bf Coordinate3D} ()
+\item 
+{\bf Coordinate3D} (double {\bf x}, double {\bf y}, double {\bf z})
+\item 
+{\bf $\sim$Coordinate3D} ()
+\item 
+void {\bf set\-X} (double {\bf x})
+\item 
+void {\bf set\-Y} (double {\bf y})
+\item 
+void {\bf set\-Z} (double {\bf z})
+\item 
+double {\bf get\-X} ()
+\item 
+double {\bf get\-Y} ()
+\item 
+double {\bf get\-Z} ()
+\item 
+double {\bf distance} (Coordinate3D $\ast$c)
+\item 
+{\bf Coordinate} $\ast$ {\bf projection} (double x\-Offset, double y\-Offset, double scale, double distance)
+\item 
+void {\bf apply\-Matrix} ({\bf Matrix}$<$ double $>$ $\ast$)
+\item 
+void {\bf translate} (Coordinate3D $\ast$)
+\item 
+void {\bf write} (std::ostream \&stream) const
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+double {\bf x}
+\item 
+double {\bf y}
+\item 
+double {\bf z}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+This class handles coordinates. Remember that computers use coordinate systems that are upside-down. This means that the origin of the coordinate system lays in the top-left corner, so the Y axis is upside-down... You will notice that a lot of objects use pointers to Coordinates in constructors, etc. This is because the library needs to be generic, so you can use inherited Coordinates as Coordinates too (for example {\bf Spline\-Coordinate} {\rm (p.\,\pageref{classSplineCoordinate})} instances). \begin{Desc}
+\item[Author: ]\par
+Anthony Liekens \end{Desc}
+
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Coordinate3D@{Coordinate3D}!Coordinate3D@{Coordinate3D}}
+\index{Coordinate3D@{Coordinate3D}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Coordinate3D::Coordinate3D ()}\label{classCoordinate3D_a0}
+
+
+Constructor. Constructs a coordinate. \index{Coordinate3D@{Coordinate3D}!Coordinate3D@{Coordinate3D}}
+\index{Coordinate3D@{Coordinate3D}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Coordinate3D::Coordinate3D (double {\em x}, double {\em y}, double {\em z})}\label{classCoordinate3D_a1}
+
+
+Constructor. Constructs a coordinate. \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+x}]Integer X-axis value of the coordinate (0 = leftmost point) \item[{\em 
+y}]Integer Y-axis value of the coordinate (0 = top) \end{description}
+\end{Desc}
+\index{Coordinate3D@{Coordinate3D}!~Coordinate3D@{$\sim$Coordinate3D}}
+\index{~Coordinate3D@{$\sim$Coordinate3D}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Coordinate3D::$\sim$Coordinate3D ()}\label{classCoordinate3D_a2}
+
+
+Destructor. Destructs a coordinate. 
+
+\subsection{Member Function Documentation}
+\index{Coordinate3D@{Coordinate3D}!applyMatrix@{applyMatrix}}
+\index{applyMatrix@{applyMatrix}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Coordinate3D::apply\-Matrix ({\bf Matrix}$<$ double $>$ $\ast$)}\label{classCoordinate3D_a11}
+
+
+\index{Coordinate3D@{Coordinate3D}!distance@{distance}}
+\index{distance@{distance}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Coordinate3D::distance (Coordinate3D $\ast$ {\em c})\hspace{0.3cm}{\tt  [inline]}}\label{classCoordinate3D_a9}
+
+
+Returns the distance between this coordinate and another point. \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+c}]Coordinate3D of that other point \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns: ]\par
+double \end{Desc}
+\index{Coordinate3D@{Coordinate3D}!getX@{getX}}
+\index{getX@{getX}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Coordinate3D::get\-X ()\hspace{0.3cm}{\tt  [inline]}}\label{classCoordinate3D_a6}
+
+
+Returns the X-axis value of the coordinate. \begin{Desc}
+\item[Returns: ]\par
+double \end{Desc}
+\index{Coordinate3D@{Coordinate3D}!getY@{getY}}
+\index{getY@{getY}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Coordinate3D::get\-Y ()\hspace{0.3cm}{\tt  [inline]}}\label{classCoordinate3D_a7}
+
+
+Returns the Y-axis value of the coordinate. \begin{Desc}
+\item[Returns: ]\par
+double \end{Desc}
+\index{Coordinate3D@{Coordinate3D}!getZ@{getZ}}
+\index{getZ@{getZ}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Coordinate3D::get\-Z ()\hspace{0.3cm}{\tt  [inline]}}\label{classCoordinate3D_a8}
+
+
+Returns the Y-axis value of the coordinate. \begin{Desc}
+\item[Returns: ]\par
+double \end{Desc}
+\index{Coordinate3D@{Coordinate3D}!projection@{projection}}
+\index{projection@{projection}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Coordinate} $\ast$ Coordinate3D::projection (double {\em x\-Offset}, double {\em y\-Offset}, double {\em scale}, double {\em distance})}\label{classCoordinate3D_a10}
+
+
+\index{Coordinate3D@{Coordinate3D}!setX@{setX}}
+\index{setX@{setX}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Coordinate3D::set\-X (double {\em x})\hspace{0.3cm}{\tt  [inline]}}\label{classCoordinate3D_a3}
+
+
+Set the X-axis value. \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+x}]double value \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns: ]\par
+void \end{Desc}
+\index{Coordinate3D@{Coordinate3D}!setY@{setY}}
+\index{setY@{setY}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Coordinate3D::set\-Y (double {\em y})\hspace{0.3cm}{\tt  [inline]}}\label{classCoordinate3D_a4}
+
+
+Set the Y-axis value. \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+y}]double value \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns: ]\par
+void \end{Desc}
+\index{Coordinate3D@{Coordinate3D}!setZ@{setZ}}
+\index{setZ@{setZ}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Coordinate3D::set\-Z (double {\em z})\hspace{0.3cm}{\tt  [inline]}}\label{classCoordinate3D_a5}
+
+
+Set the Z-axis value. \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+z}]double value \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns: ]\par
+void \end{Desc}
+\index{Coordinate3D@{Coordinate3D}!translate@{translate}}
+\index{translate@{translate}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Coordinate3D::translate (Coordinate3D $\ast$)}\label{classCoordinate3D_a12}
+
+
+\index{Coordinate3D@{Coordinate3D}!write@{write}}
+\index{write@{write}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Coordinate3D::write (std::ostream \& {\em stream}) const}\label{classCoordinate3D_a13}
+
+
+Write the coordinate object to a given outstream. \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+stream}]output stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns: ]\par
+void \end{Desc}
+
+
+\subsection{Member Data Documentation}
+\index{Coordinate3D@{Coordinate3D}!x@{x}}
+\index{x@{x}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Coordinate3D::x\hspace{0.3cm}{\tt  [protected]}}\label{classCoordinate3D_n0}
+
+
+\index{Coordinate3D@{Coordinate3D}!y@{y}}
+\index{y@{y}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Coordinate3D::y\hspace{0.3cm}{\tt  [protected]}}\label{classCoordinate3D_n1}
+
+
+\index{Coordinate3D@{Coordinate3D}!z@{z}}
+\index{z@{z}!Coordinate3D@{Coordinate3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}double Coordinate3D::z\hspace{0.3cm}{\tt  [protected]}}\label{classCoordinate3D_n2}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf coordinate3d.h}\item 
+{\bf coordinate3d.cpp}\end{CompactItemize}

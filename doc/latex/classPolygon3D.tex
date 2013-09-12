@@ -1,0 +1,183 @@
+\section{Polygon3D Class Reference}
+\label{classPolygon3D}\index{Polygon3D@{Polygon3D}}
+{\tt \#include $<$polygon3d.h$>$}
+
+Inheritance diagram for Polygon3D::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4cm]{classPolygon3D}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum {\bf Sub\-Types} \{ {\bf Poly\-Line3DType} =   1, 
+{\bf Box\-Type} =  2, 
+{\bf Polygon\-Type} =  3, 
+{\bf Arc\-Box\-Type} =  4, 
+{\bf Picture\-Type} =  5
+ \}
+\end{CompactItemize}
+\subsection*{Public Methods}
+\begin{CompactItemize}
+\item 
+{\bf Polygon3D} ()
+\item 
+{\bf Polygon3D} ({\bf Coordinate3D} $\ast$point1, {\bf Coordinate3D} $\ast$point2)
+\item 
+{\bf $\sim$Polygon3D} ()
+\item 
+int {\bf get\-Sub\-Type} ()
+\item 
+std::pair$<$ double, double $>$ {\bf get\-Depth\-Range} ()
+\item 
+void {\bf render} ({\bf Figure} $\ast$, double x\-Offset, double y\-Offset, double scale, double distance, double min\-Depth, double max\-Depth, int min\-Fig\-Depth=0, int max\-Fig\-Depth=999)
+\item 
+void {\bf apply\-Matrix} ({\bf Matrix}$<$ double $>$ $\ast$)
+\item 
+void {\bf translate} ({\bf Coordinate3D} $\ast$)
+\item 
+void {\bf write} (std::ostream \&stream) const
+\end{CompactItemize}
+\subsection*{Protected Methods}
+\begin{CompactItemize}
+\item 
+void {\bf set\-Sub\-Type} ({\bf Sub\-Types} {\bf sub\-Type})
+\end{CompactItemize}
+\subsection*{Private Attributes}
+\begin{CompactItemize}
+\item 
+{\bf Sub\-Types} {\bf sub\-Type}
+\end{CompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\index{Polygon3D@{Polygon3D}!SubTypes@{SubTypes}}
+\index{SubTypes@{SubTypes}!Polygon3D@{Polygon3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum Polygon3D::Sub\-Types}\label{classPolygon3D_s5}
+
+
+Enumeration of polygon types. The following types can be used to set the type of a polygon object : \{$\backslash$tt Polygon\-Type, Box\-Type, Polygon\-Type, Picture\-Type\}. Inherited polygon classes will set their appropriate type. \begin{Desc}
+\item[Enumeration values: ]\par
+\begin{description}
+\index{PolyLine3DType@{PolyLine3DType}!Polygon3D@{Polygon3D}}\index{Polygon3D@{Polygon3D}!PolyLine3DType@{PolyLine3DType}}\item[{\em 
+{\em Poly\-Line3DType}\label{classPolygon3D_s5s0}
+}]\index{BoxType@{BoxType}!Polygon3D@{Polygon3D}}\index{Polygon3D@{Polygon3D}!BoxType@{BoxType}}\item[{\em 
+{\em Box\-Type}\label{classPolygon3D_s5s1}
+}]\index{PolygonType@{PolygonType}!Polygon3D@{Polygon3D}}\index{Polygon3D@{Polygon3D}!PolygonType@{PolygonType}}\item[{\em 
+{\em Polygon\-Type}\label{classPolygon3D_s5s2}
+}]\index{ArcBoxType@{ArcBoxType}!Polygon3D@{Polygon3D}}\index{Polygon3D@{Polygon3D}!ArcBoxType@{ArcBoxType}}\item[{\em 
+{\em Arc\-Box\-Type}\label{classPolygon3D_s5s3}
+}]\index{PictureType@{PictureType}!Polygon3D@{Polygon3D}}\index{Polygon3D@{Polygon3D}!PictureType@{PictureType}}\item[{\em 
+{\em Picture\-Type}\label{classPolygon3D_s5s4}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Polygon3D@{Polygon3D}!Polygon3D@{Polygon3D}}
+\index{Polygon3D@{Polygon3D}!Polygon3D@{Polygon3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Polygon3D::Polygon3D ()}\label{classPolygon3D_a0}
+
+
+Constructor. Constructs a polygon object \index{Polygon3D@{Polygon3D}!Polygon3D@{Polygon3D}}
+\index{Polygon3D@{Polygon3D}!Polygon3D@{Polygon3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Polygon3D::Polygon3D ({\bf Coordinate3D} $\ast$ {\em point1}, {\bf Coordinate3D} $\ast$ {\em point2})}\label{classPolygon3D_a1}
+
+
+Constructor. Constructs a polygon object with 2 points \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+point1}]- Instance of {\bf Coordinate3D} {\rm (p.\,\pageref{classCoordinate3D})}. {\bf Coordinate3D} {\rm (p.\,\pageref{classCoordinate3D})} of the first point \item[{\em 
+point2}]- Instance of {\bf Coordinate3D} {\rm (p.\,\pageref{classCoordinate3D})}. {\bf Coordinate3D} {\rm (p.\,\pageref{classCoordinate3D})} of the second point \end{description}
+\end{Desc}
+\index{Polygon3D@{Polygon3D}!~Polygon3D@{$\sim$Polygon3D}}
+\index{~Polygon3D@{$\sim$Polygon3D}!Polygon3D@{Polygon3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Polygon3D::$\sim$Polygon3D ()}\label{classPolygon3D_a2}
+
+
+Destructor. Destructs a polygon object 
+
+\subsection{Member Function Documentation}
+\index{Polygon3D@{Polygon3D}!applyMatrix@{applyMatrix}}
+\index{applyMatrix@{applyMatrix}!Polygon3D@{Polygon3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Polygon3D::apply\-Matrix ({\bf Matrix}$<$ double $>$ $\ast$)\hspace{0.3cm}{\tt  [virtual]}}\label{classPolygon3D_a6}
+
+
+
+
+Implements {\bf Object3D} {\rm (p.\,\pageref{classObject3D_a2})}.\index{Polygon3D@{Polygon3D}!getDepthRange@{getDepthRange}}
+\index{getDepthRange@{getDepthRange}!Polygon3D@{Polygon3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::pair$<$ double, double $>$ Polygon3D::get\-Depth\-Range ()\hspace{0.3cm}{\tt  [virtual]}}\label{classPolygon3D_a4}
+
+
+
+
+Implements {\bf Object3D} {\rm (p.\,\pageref{classObject3D_a0})}.\index{Polygon3D@{Polygon3D}!getSubType@{getSubType}}
+\index{getSubType@{getSubType}!Polygon3D@{Polygon3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int Polygon3D::get\-Sub\-Type ()\hspace{0.3cm}{\tt  [inline]}}\label{classPolygon3D_a3}
+
+
+Returns the polygon sub type \begin{Desc}
+\item[Returns: ]\par
+Instance of {\bf Sub\-Types} {\rm (p.\,\pageref{classPolygon3D_s5})} \end{Desc}
+\index{Polygon3D@{Polygon3D}!render@{render}}
+\index{render@{render}!Polygon3D@{Polygon3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Polygon3D::render ({\bf Figure} $\ast$, double {\em x\-Offset}, double {\em y\-Offset}, double {\em scale}, double {\em distance}, double {\em min\-Depth}, double {\em max\-Depth}, int {\em min\-Fig\-Depth} = 0, int {\em max\-Fig\-Depth} = 999)\hspace{0.3cm}{\tt  [virtual]}}\label{classPolygon3D_a5}
+
+
+
+
+Implements {\bf Object3D} {\rm (p.\,\pageref{classObject3D_a1})}.\index{Polygon3D@{Polygon3D}!setSubType@{setSubType}}
+\index{setSubType@{setSubType}!Polygon3D@{Polygon3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Polygon3D::set\-Sub\-Type ({\bf Sub\-Types} {\em sub\-Type})\hspace{0.3cm}{\tt  [inline, protected]}}\label{classPolygon3D_b0}
+
+
+Set the sub type \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+sub\-Type}]{\bf Sub\-Types} {\rm (p.\,\pageref{classPolygon3D_s5})} \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns: ]\par
+void \end{Desc}
+\index{Polygon3D@{Polygon3D}!translate@{translate}}
+\index{translate@{translate}!Polygon3D@{Polygon3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Polygon3D::translate ({\bf Coordinate3D} $\ast$)\hspace{0.3cm}{\tt  [virtual]}}\label{classPolygon3D_a7}
+
+
+
+
+Implements {\bf Object3D} {\rm (p.\,\pageref{classObject3D_a3})}.\index{Polygon3D@{Polygon3D}!write@{write}}
+\index{write@{write}!Polygon3D@{Polygon3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Polygon3D::write (std::ostream \& {\em stream}) const\hspace{0.3cm}{\tt  [virtual]}}\label{classPolygon3D_a8}
+
+
+Write the polygon object to a given outstream. \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+stream}]output stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns: ]\par
+void \end{Desc}
+
+
+Reimplemented from {\bf Object} {\rm (p.\,\pageref{classObject_a3})}.
+
+\subsection{Member Data Documentation}
+\index{Polygon3D@{Polygon3D}!subType@{subType}}
+\index{subType@{subType}!Polygon3D@{Polygon3D}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Sub\-Types} Polygon3D::sub\-Type\hspace{0.3cm}{\tt  [private]}}\label{classPolygon3D_o0}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf polygon3d.h}\item 
+{\bf polygon3d.cpp}\end{CompactItemize}

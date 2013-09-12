@@ -1,0 +1,278 @@
+\section{Arrow Class Reference}
+\label{classArrow}\index{Arrow@{Arrow}}
+{\tt \#include $<$arrow.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+enum {\bf Arrow\-Type} \{ {\bf Stick\-Arrow} =  0, 
+{\bf Closed\-Triangle} =  1, 
+{\bf Closed\-Intended} =  2, 
+{\bf Closed\-Pointed} =  3
+ \}
+\item 
+enum {\bf Arrow\-Style} \{ {\bf Hollow} =  0, 
+{\bf Filled} =  1
+ \}
+\end{CompactItemize}
+\subsection*{Public Methods}
+\begin{CompactItemize}
+\item 
+{\bf Arrow} ()
+\item 
+{\bf $\sim$Arrow} ()
+\item 
+void {\bf set\-Type} ({\bf Arrow\-Type} {\bf type})
+\item 
+void {\bf set\-Style} ({\bf Arrow\-Style} {\bf style})
+\item 
+void {\bf set\-Thickness} (float {\bf thickness})
+\item 
+void {\bf set\-Width} (float {\bf width})
+\item 
+void {\bf set\-Height} (float {\bf height})
+\item 
+{\bf Arrow\-Type} {\bf get\-Type} ()
+\item 
+{\bf Arrow\-Style} {\bf get\-Style} ()
+\item 
+float {\bf get\-Thickness} ()
+\item 
+float {\bf get\-Width} ()
+\item 
+float {\bf get\-Height} ()
+\item 
+void {\bf write} (std::ostream \&stream) const
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+{\bf Arrow\-Type} {\bf type}
+\item 
+{\bf Arrow\-Style} {\bf style}
+\item 
+float {\bf thickness}
+\item 
+float {\bf width}
+\item 
+float {\bf height}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+This class handles arrows objects. These arrows can be used at the start and end of {\bf Poly\-Line} {\rm (p.\,\pageref{classPolyLine})}, {\bf Arc} {\rm (p.\,\pageref{classArc})} and {\bf Spline} {\rm (p.\,\pageref{classSpline})} instances. See the {\bf Attributes::set\-Backward\-Arrow\-Bool} {\rm (p.\,\pageref{classAttributes_a14})}, {\bf Attributes::set\-Backward\-Arrow\-Bool} {\rm (p.\,\pageref{classAttributes_a14})}, {\bf Attributes::get\-Backward\-Arrow\-Bool} {\rm (p.\,\pageref{classAttributes_a36})}, {\bf Attributes::get\-Backward\-Arrow\-Bool} {\rm (p.\,\pageref{classAttributes_a36})}, {\bf Attributes::set\-Backward\-Arrow} {\rm (p.\,\pageref{classAttributes_a16})}, {\bf Attributes::set\-Backward\-Arrow} {\rm (p.\,\pageref{classAttributes_a16})}, {\bf Attributes::get\-Backward\-Arrow} {\rm (p.\,\pageref{classAttributes_a38})} and {\bf Attributes::get\-Backward\-Arrow} {\rm (p.\,\pageref{classAttributes_a38})} methods for how to use Arrow instances. \begin{Desc}
+\item[Author: ]\par
+Anthony Liekens \end{Desc}
+
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{Arrow@{Arrow}!ArrowStyle@{ArrowStyle}}
+\index{ArrowStyle@{ArrowStyle}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum Arrow::Arrow\-Style}\label{classArrow_s7}
+
+
+Enumeration of arrow styles. The following arrow styles can be used to set the style of an arrow object : \{$\backslash$tt Hollow, Filled\} \begin{Desc}
+\item[Enumeration values: ]\par
+\begin{description}
+\index{Hollow@{Hollow}!Arrow@{Arrow}}\index{Arrow@{Arrow}!Hollow@{Hollow}}\item[{\em 
+{\em Hollow}\label{classArrow_s7s4}
+}]\index{Filled@{Filled}!Arrow@{Arrow}}\index{Arrow@{Arrow}!Filled@{Filled}}\item[{\em 
+{\em Filled}\label{classArrow_s7s5}
+}]\end{description}
+\end{Desc}
+
+\index{Arrow@{Arrow}!ArrowType@{ArrowType}}
+\index{ArrowType@{ArrowType}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum Arrow::Arrow\-Type}\label{classArrow_s6}
+
+
+Enumeration of arrow types. The following arrow types can be used to set the type of an arrow object : \{$\backslash$tt Stick\-Arrow, Closed\-Triangle, Closed\-Intended, Closed\-Pointed\} \begin{Desc}
+\item[Enumeration values: ]\par
+\begin{description}
+\index{StickArrow@{StickArrow}!Arrow@{Arrow}}\index{Arrow@{Arrow}!StickArrow@{StickArrow}}\item[{\em 
+{\em Stick\-Arrow}\label{classArrow_s6s0}
+}]\index{ClosedTriangle@{ClosedTriangle}!Arrow@{Arrow}}\index{Arrow@{Arrow}!ClosedTriangle@{ClosedTriangle}}\item[{\em 
+{\em Closed\-Triangle}\label{classArrow_s6s1}
+}]\index{ClosedIntended@{ClosedIntended}!Arrow@{Arrow}}\index{Arrow@{Arrow}!ClosedIntended@{ClosedIntended}}\item[{\em 
+{\em Closed\-Intended}\label{classArrow_s6s2}
+}]\index{ClosedPointed@{ClosedPointed}!Arrow@{Arrow}}\index{Arrow@{Arrow}!ClosedPointed@{ClosedPointed}}\item[{\em 
+{\em Closed\-Pointed}\label{classArrow_s6s3}
+}]\end{description}
+\end{Desc}
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Arrow@{Arrow}!Arrow@{Arrow}}
+\index{Arrow@{Arrow}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Arrow::Arrow ()}\label{classArrow_a0}
+
+
+Constructor. Constructs an Arrow instance \index{Arrow@{Arrow}!~Arrow@{$\sim$Arrow}}
+\index{~Arrow@{$\sim$Arrow}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Arrow::$\sim$Arrow ()}\label{classArrow_a1}
+
+
+Destructor. Destructs an Arrow instance 
+
+\subsection{Member Function Documentation}
+\index{Arrow@{Arrow}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float Arrow::get\-Height ()\hspace{0.3cm}{\tt  [inline]}}\label{classArrow_a11}
+
+
+Returns the height. \begin{Desc}
+\item[Returns: ]\par
+float \end{Desc}
+\index{Arrow@{Arrow}!getStyle@{getStyle}}
+\index{getStyle@{getStyle}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Arrow\-Style} Arrow::get\-Style ()\hspace{0.3cm}{\tt  [inline]}}\label{classArrow_a8}
+
+
+Returns the style. \begin{Desc}
+\item[Returns: ]\par
+{\bf Arrow\-Style} {\rm (p.\,\pageref{classArrow_s7})} \end{Desc}
+\index{Arrow@{Arrow}!getThickness@{getThickness}}
+\index{getThickness@{getThickness}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float Arrow::get\-Thickness ()\hspace{0.3cm}{\tt  [inline]}}\label{classArrow_a9}
+
+
+Returns the thickness. \begin{Desc}
+\item[Returns: ]\par
+float \end{Desc}
+\index{Arrow@{Arrow}!getType@{getType}}
+\index{getType@{getType}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Arrow\-Type} Arrow::get\-Type ()\hspace{0.3cm}{\tt  [inline]}}\label{classArrow_a7}
+
+
+Returns the type. \begin{Desc}
+\item[Returns: ]\par
+{\bf Arrow\-Type} {\rm (p.\,\pageref{classArrow_s6})} \end{Desc}
+\index{Arrow@{Arrow}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float Arrow::get\-Width ()\hspace{0.3cm}{\tt  [inline]}}\label{classArrow_a10}
+
+
+Returns the width. \begin{Desc}
+\item[Returns: ]\par
+float \end{Desc}
+\index{Arrow@{Arrow}!setHeight@{setHeight}}
+\index{setHeight@{setHeight}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Arrow::set\-Height (float {\em height})\hspace{0.3cm}{\tt  [inline]}}\label{classArrow_a6}
+
+
+Set the height. \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+heigt}]float \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns: ]\par
+void \end{Desc}
+\index{Arrow@{Arrow}!setStyle@{setStyle}}
+\index{setStyle@{setStyle}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Arrow::set\-Style ({\bf Arrow\-Style} {\em style})\hspace{0.3cm}{\tt  [inline]}}\label{classArrow_a3}
+
+
+Set the style. \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+style}]{\bf Arrow\-Style} {\rm (p.\,\pageref{classArrow_s7})} \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns: ]\par
+void \end{Desc}
+\index{Arrow@{Arrow}!setThickness@{setThickness}}
+\index{setThickness@{setThickness}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Arrow::set\-Thickness (float {\em thickness})\hspace{0.3cm}{\tt  [inline]}}\label{classArrow_a4}
+
+
+Set the thickness. \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+thickness}]float \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns: ]\par
+void \end{Desc}
+\index{Arrow@{Arrow}!setType@{setType}}
+\index{setType@{setType}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Arrow::set\-Type ({\bf Arrow\-Type} {\em type})\hspace{0.3cm}{\tt  [inline]}}\label{classArrow_a2}
+
+
+Set the type. \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+type}]{\bf Arrow\-Type} {\rm (p.\,\pageref{classArrow_s6})} \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns: ]\par
+void \end{Desc}
+\index{Arrow@{Arrow}!setWidth@{setWidth}}
+\index{setWidth@{setWidth}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Arrow::set\-Width (float {\em width})\hspace{0.3cm}{\tt  [inline]}}\label{classArrow_a5}
+
+
+Set the width. \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+width}]float \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns: ]\par
+void \end{Desc}
+\index{Arrow@{Arrow}!write@{write}}
+\index{write@{write}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Arrow::write (std::ostream \& {\em stream}) const}\label{classArrow_a12}
+
+
+Write the coordinate object to a given outstream. \begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+stream}]output stream \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns: ]\par
+void \end{Desc}
+
+
+\subsection{Member Data Documentation}
+\index{Arrow@{Arrow}!height@{height}}
+\index{height@{height}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float Arrow::height\hspace{0.3cm}{\tt  [protected]}}\label{classArrow_n4}
+
+
+\index{Arrow@{Arrow}!style@{style}}
+\index{style@{style}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Arrow\-Style} Arrow::style\hspace{0.3cm}{\tt  [protected]}}\label{classArrow_n1}
+
+
+\index{Arrow@{Arrow}!thickness@{thickness}}
+\index{thickness@{thickness}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float Arrow::thickness\hspace{0.3cm}{\tt  [protected]}}\label{classArrow_n2}
+
+
+\index{Arrow@{Arrow}!type@{type}}
+\index{type@{type}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}{\bf Arrow\-Type} Arrow::type\hspace{0.3cm}{\tt  [protected]}}\label{classArrow_n0}
+
+
+\index{Arrow@{Arrow}!width@{width}}
+\index{width@{width}!Arrow@{Arrow}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float Arrow::width\hspace{0.3cm}{\tt  [protected]}}\label{classArrow_n3}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+{\bf arrow.h}\item 
+{\bf arrow.cpp}\end{CompactItemize}

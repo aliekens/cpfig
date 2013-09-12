@@ -1,0 +1,32 @@
+CPFIG, or FIG++
+
+A C++ library for handling xfig (www.xfig.org) objects and outputting them
+to the FIG file format.
+
+COPYRIGHT
+
+2000-2003 Anthony Liekens, anthony@liekens.net
+
+INSTALLATION
+
+Configure and compile as usual
+
+	$ ./configure && make && make install
+
+where you do the make install as su.
+
+You can now use the library, as in the examples.
+
+EXAMPLES
+
+Make the two demo applications in the examples/ directory. The demo.cpp
+example gives an overview of the features of cpfig, in order to render
+various 2D objects to the FIG format. The tiefighter.cpp example shows you
+how you can display 3D data from a tiefighter model stored in
+tiefighter.data.
+
+DOCUMENTATION
+
+If you have doxygen, you can compile the documentation of the source tree with 
+
+	$ doxygen doxygen.config
